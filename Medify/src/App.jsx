@@ -4,7 +4,9 @@ function App() {
   
 
   return (
-    <div></div>
+    <div style={{height: "100vh", backgroundColor: "white"}}>
+      
+    </div>
   )
 }
 
