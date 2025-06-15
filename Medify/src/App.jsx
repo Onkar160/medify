@@ -1,11 +1,12 @@
-
+import Home from "./Home/Home";
+import { Outlet } from "react-router";
 
 function App() {
-  
-
   return (
-    <div></div>
-  )
+    <div style={{ height: "100vh", backgroundColor: "white" }}>
+      <Outlet />
+    </div>
+  );
 }
 
-export default App
+export default App;
