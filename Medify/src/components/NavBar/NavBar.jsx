@@ -76,7 +76,7 @@ export default function NavBar({ background }) {
             </Link>
           </Box>
 
-          <TemporaryDrawer options={navOptions} />
+          <TemporaryDrawer options={navOptions} setOptions={setNavOptions} />
         </Stack>
       </Container>
     </header>
