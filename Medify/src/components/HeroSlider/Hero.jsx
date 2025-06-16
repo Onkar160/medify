@@ -21,7 +21,7 @@ export default function Hero() {
         disableGutters
         maxWidth={false}
       >
-        <Stack sx={{ width: { xs: "100%", lg: "50%" } }}>
+        <Stack sx={{ width: { xs: "100%", lg: "50%" }, alignSelf: "flex-start" }}>
           <Box>
             <Typography variant="h4" color="#102851" fontWeight={600}>
               Skip the travel! Find Online
