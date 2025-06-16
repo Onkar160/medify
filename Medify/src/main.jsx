@@ -26,13 +26,31 @@ const theme = createTheme({
       },
     },
   },
+  typography: {
+    fontFamily: [
+      "Poppins",
+      "BlinkMacSystemFont",
+      '"Segoe UI"',
+      "Roboto",
+      '"Helvetica Neue"',
+      "Arial",
+      "sans-serif",
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(","),
+  },
 });
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: App,
-    children: [{path: "/", Component: Home}, { path: "search", Component: Search }, {path: "my-bookings", Component: MyBookings}],
+    children: [
+      { path: "/", Component: Home },
+      { path: "search", Component: Search },
+      { path: "my-bookings", Component: MyBookings },
+    ],
   },
 ]);
 
