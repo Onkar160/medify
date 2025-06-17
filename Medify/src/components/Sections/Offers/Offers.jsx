@@ -38,7 +38,7 @@ export default function Offers() {
             <SwiperSlide key={idx}>
               <img
                 src={src}
-                alt={`card${idx}`}
+                alt={`card${idx}`}  
                 style={{ width: "100%", height: "auto", display: "block" }}
               />
             </SwiperSlide>
