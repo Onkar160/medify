@@ -19,8 +19,8 @@ export default function IconCard({
       py={4}
       boxShadow={boxshadow ? "0px 34px 44px #D5DBE470 " : "none"}
     >
-      <img src={icon} alt={`${text}_icon`} />
-      <Typography marginTop="20px" variant="h5" color="#ABB6C7">
+      <img src={icon} alt={`${text}_icon`} style={{objectFit: "cover", width: "60px", height: "60px"}} />
+      <Typography marginTop="20px" variant="h5" color="#ABB6C7" px={3}>
         {text}
       </Typography>
     </Box>

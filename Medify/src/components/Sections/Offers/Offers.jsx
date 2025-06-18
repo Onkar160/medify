@@ -15,7 +15,7 @@ export default function Offers() {
       <Container
         disableGutters
         maxWidth={false}
-        sx={{ px: { xs: 5, md: 15 }, py: 6, pt: 36 }}
+        sx={{ px: { xs: 5, md: 15 }, pb: 6, pt: 0 }}
       >
         <Swiper
           className={styles.customSwiper}

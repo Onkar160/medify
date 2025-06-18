@@ -16,7 +16,6 @@ export default function Hero() {
           alignItems: "center",
           flexDirection: { xs: "column", lg: "row" },
           gap: { xs: 5, lg: 0 },
-          pb: "30%",
         }}
         disableGutters
         maxWidth={false}

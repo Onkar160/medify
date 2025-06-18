@@ -146,10 +146,11 @@ export default function SearchHospital() {
             variant="contained"
             type="submit"
             sx={{
-              width: { xs: "20%", md: "30%" },
+              width: { xs: "40%",sm: "25%", md: "40%", lg: "30%" },
               p: 1.5,
               boxShadow: "none",
               borderRadius: "8px",
+              px: 2
             }}
           >
             <SearchIcon sx={{ mr: 1 }} />
