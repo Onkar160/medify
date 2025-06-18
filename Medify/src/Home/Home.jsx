@@ -4,7 +4,7 @@ import Hero from "../components/HeroSlider/Hero";
 import Offers from "../components/Sections/Offers/Offers";
 import SearchHospital from "../components/SearchHospital/SearchHospital";
 import { Box } from "@mui/material";
-
+import IconLayout from "../components/IconLayout/IconLayout";
 
 export default function Home() {
   return (
@@ -16,9 +16,26 @@ export default function Home() {
         flexDirection="column"
         alignItems="center"
         justifyContent="center"
-        
+        gap="70px"
+        bgcolor="white"
+        sx={{
+          mx: { xs: 1, md: 15 },
+          boxShadow: "6px 6px 35px 0 #D5DBE470",
+          borderRadius: "8px",
+          position: "relative",
+          top: {
+            xs: "-90px",
+            sm: "-75px",
+            md: "-60px",
+            lg: "-50px",
+            xl: "-120px",
+          },
+        }}
+        py={3}
+        px={3}
       >
         <SearchHospital />
+        <IconLayout />
       </Box>
       <Offers />
       <Footer />
