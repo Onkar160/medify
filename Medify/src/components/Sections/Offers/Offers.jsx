@@ -29,8 +29,7 @@ export default function Offers() {
               slidesPerView: 3,
             },
           }}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
+          
           style={{ width: "100%" }}
           pagination={{ clickable: true }}
         >
