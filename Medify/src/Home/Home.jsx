@@ -4,11 +4,7 @@ import Hero from "../components/HeroSlider/Hero";
 import Offers from "../components/Sections/Offers/Offers";
 import SearchHospital from "../components/SearchHospital/SearchHospital";
 import { Box } from "@mui/material";
-import Doctor from "../assets/Doctor.png";
-import Labs from "../assets/Drugstore.png";
-import Hospital from "../assets/Hospital.png";
-import Medicine from "../assets/Capsule.png";
-import Ambulance from "../assets/Ambulance.png";
+
 
 export default function Home() {
   return (
