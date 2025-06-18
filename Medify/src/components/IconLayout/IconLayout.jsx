@@ -65,7 +65,7 @@ export default function IconLayout() {
         justifyContent="center"
       >
         {cardData.map((card) => (
-          <Grid size={{ xs: 6, sm: 5, md: 4, lg: 3, xl: 2.2 }}>
+          <Grid size={{ xs: 6, sm: 5, md: 4, lg: 3, xl: 2.2 }} key={card.text}>
             <IconCard
               icon={card.icon}
               text={card.text}
