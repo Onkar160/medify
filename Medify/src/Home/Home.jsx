@@ -8,6 +8,7 @@ import IconLayout from "../components/IconLayout/IconLayout";
 import Specialization from "../components/Sections/Specialization/Specialization";
 import Specialists from "../components/Sections/Specialists/Specialists";
 import FAQs from "../components/Sections/FAQs/FAQ";
+import Blogs from "../components/Sections/Blogs/Blogs";
 
 export default function Home() {
   return (
@@ -43,6 +44,7 @@ export default function Home() {
       <Offers />
       <Specialization />
       <Specialists />
+      <Blogs />
       <FAQs />
       <Footer />
     </div>
