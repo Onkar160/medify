@@ -41,7 +41,7 @@ export default function FAQs() {
         maxWidth={false}
         sx={{
           px: { xs: 5, md: 15 },
-          py: 4,
+          py: 8,
         }}
       >
         <Box
