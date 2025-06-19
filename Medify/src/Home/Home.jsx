@@ -6,6 +6,7 @@ import SearchHospital from "../components/SearchHospital/SearchHospital";
 import { Box } from "@mui/material";
 import IconLayout from "../components/IconLayout/IconLayout";
 import Specialization from "../components/Sections/Specialization/Specialization";
+import Specialists from "../components/Sections/Specialists/Specialists";
 
 export default function Home() {
   return (
@@ -40,6 +41,7 @@ export default function Home() {
       </Box>
       <Offers />
       <Specialization />
+      <Specialists />
       <Footer />
     </div>
   );
