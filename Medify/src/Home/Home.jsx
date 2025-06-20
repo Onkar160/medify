@@ -11,6 +11,7 @@ import FAQs from "../components/Sections/FAQs/FAQ";
 import Blogs from "../components/Sections/Blogs/Blogs";
 import DownloadApp from "../components/Sections/DownloadApp/DownloadApp";
 import PatientCaring from "../components/Sections/PatientCaring/PatientCaring";
+import OurFamilies from "../components/Sections/OurFamilies/OurFamilies";
 
 export default function Home() {
   return (
@@ -48,6 +49,7 @@ export default function Home() {
       <Specialists />
       <PatientCaring />
       <Blogs />
+      <OurFamilies />
       <FAQs />
       <DownloadApp />
       <Footer />
