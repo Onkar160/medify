@@ -10,6 +10,7 @@ import Specialists from "../components/Sections/Specialists/Specialists";
 import FAQs from "../components/Sections/FAQs/FAQ";
 import Blogs from "../components/Sections/Blogs/Blogs";
 import DownloadApp from "../components/Sections/DownloadApp/DownloadApp";
+import PatientCaring from "../components/Sections/PatientCaring/PatientCaring";
 
 export default function Home() {
   return (
@@ -45,6 +46,7 @@ export default function Home() {
       <Offers />
       <Specialization />
       <Specialists />
+      <PatientCaring />
       <Blogs />
       <FAQs />
       <DownloadApp />
