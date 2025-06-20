@@ -84,7 +84,7 @@ export default function SearchHospital() {
             <Select
               fullWidth
               inputProps={{ "aria-label": "Without label" }}
-              id="demo-simple-select"
+              id="state"
               displayEmpty
               value={selectedState}
               renderValue={(selectedState) => {
@@ -115,7 +115,7 @@ export default function SearchHospital() {
             <Select
               fullWidth
               inputProps={{ "aria-label": "Without label" }}
-              id="demo-simple-select"
+              id="city"
               displayEmpty
               value={selectedCity}
               renderValue={(selectedCity) => {
@@ -145,12 +145,14 @@ export default function SearchHospital() {
           <Button
             variant="contained"
             type="submit"
+            aria-label="Search"
+            id="searchBtn"
             sx={{
-              width: { xs: "40%",sm: "25%", md: "40%", lg: "30%" },
+              width: { xs: "40%", sm: "25%", md: "40%", lg: "30%" },
               p: 1.5,
               boxShadow: "none",
               borderRadius: "8px",
-              px: 2
+              px: 2,
             }}
           >
             <SearchIcon sx={{ mr: 1 }} />
