@@ -15,8 +15,6 @@ export default function Blogs() {
       maxWidth={false}
       disableGutters
       sx={{
-        background:
-          "linear-gradient(to right, #E7F0FF 0%, #E8F1FF 47%, #E8F1FF 100%)",
         px: { xs: 5, md: 15 },
         py: 8,
       }}
