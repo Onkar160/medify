@@ -9,6 +9,7 @@ import Specialization from "../components/Sections/Specialization/Specialization
 import Specialists from "../components/Sections/Specialists/Specialists";
 import FAQs from "../components/Sections/FAQs/FAQ";
 import Blogs from "../components/Sections/Blogs/Blogs";
+import DownloadApp from "../components/Sections/DownloadApp/DownloadApp";
 
 export default function Home() {
   return (
@@ -46,6 +47,7 @@ export default function Home() {
       <Specialists />
       <Blogs />
       <FAQs />
+      <DownloadApp />
       <Footer />
     </div>
   );
