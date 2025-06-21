@@ -12,7 +12,6 @@ export default function MyAccordion({ questionData, index }) {
   const isOpen = expandedIndex === index;
   return (
     <Accordion
-      key={index}
       expanded={isOpen}
       onChange={() => setExpandedIndex(isOpen ? false : index)}
       sx={{
