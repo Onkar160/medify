@@ -10,6 +10,7 @@ import HospitalCard from "../components/HospitalCard/HospitalCard";
 import Banner from "../assets/appointment_banner.png";
 import { GoVerified } from "react-icons/go";
 import MyContext from "./MyContext";
+import BookingModal from "../components/BookingModal/BookingModal";
 
 export default function Search() {
   const [params, setParams] = useSearchParams();
@@ -131,6 +132,7 @@ export default function Search() {
         <FAQs />
         <DownloadApp />
         <Footer />
+        <BookingModal />
       </div>
     </MyContext.Provider>
   );
