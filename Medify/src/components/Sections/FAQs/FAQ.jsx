@@ -73,7 +73,11 @@ export default function FAQs() {
               spacing={4}
             >
               {FAQ.map((question, index) => (
-                <MyAccordion questionData={question} index={index} key={index} />
+                <MyAccordion
+                  questionData={question}
+                  index={index}
+                  key={index}
+                />
               ))}
             </Stack>
           </Box>
