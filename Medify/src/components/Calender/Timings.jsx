@@ -19,15 +19,16 @@ export default function Timings({ period, timings, name }) {
         spacing={{ xs: 1, md: 6 }}
         alignItems="center"
       >
-        <Typography
-          variant="p"
-          fontSize="18px"
-          color="#414146"
-          minWidth="90px"
-          textAlign="center"
+        <p
+          style={{
+            fontSize: "18px",
+            color: "#414146",
+            minWidth: "90px",
+            textAlign: "center",
+          }}
         >
           {period}
-        </Typography>
+        </p>
         <Box
           display="flex"
           gap={3}
