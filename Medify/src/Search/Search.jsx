@@ -50,7 +50,7 @@ export default function Search() {
       const response = await axios.get(
         `https://meddata-backend.onrender.com/data?state=${selectedState}&city=${selectedCity}`
       );
-      console.log(response.data);
+      // console.log(response.data);
       setHospitalList(response.data);
     } catch (error) {
       console.error(error);
@@ -87,10 +87,6 @@ export default function Search() {
       fetchHospitalsList();
     }
   }, [selectedCity]);
-
-  useEffect(() => {
-    console.log(bookingID);
-  }, [bookingID]);
 
   return (
     <MyContext.Provider
