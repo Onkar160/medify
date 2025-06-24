@@ -164,7 +164,11 @@ function TemporaryDrawer({ options }) {
             );
           })}
           <Link to="/my-bookings">
-            <Button variant="contained">My Bookings</Button>
+            <Button variant="contained">
+              <h1 style={{ fontSize: "16px", margin: "0", fontWeight: "500" }}>
+                My Bookings
+              </h1>
+            </Button>
           </Link>
         </Stack>
       </Box>
