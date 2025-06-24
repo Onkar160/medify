@@ -8,12 +8,11 @@ import { PrevButton, NextButton } from "./SwiperButtons";
 import Timings from "./Timings";
 import MyContext from "../../Search/MyContext";
 
-export default function Calender({name}) {
+export default function Calender({ name }) {
   const dates = getSevenDays();
   const [formattedDates, setFormattedDates] = useState(null);
   const swiperRef = useRef(null);
-  const { timing, selectedDate, setSelectedDate} =
-    useContext(MyContext);
+  const { timing, selectedDate, setSelectedDate } = useContext(MyContext);
 
   useEffect(() => {
     if (dates.length) {
