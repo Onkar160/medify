@@ -68,7 +68,8 @@ export default function Search() {
       hospital.bookingTime = selectedTime;
       currentBookings.push(hospital);
       localStorage.setItem("bookings", JSON.stringify(currentBookings));
-    }
+    },
+    []
   );
 
   useEffect(() => {
