@@ -1,5 +1,4 @@
 import { IconButton } from "@mui/material";
-import { useSwiper } from "swiper/react";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 

@@ -1,22 +1,19 @@
 import getSevenDays from "../../getSevenDays";
 import moment from "moment";
 import { useEffect, useState, useRef, useContext } from "react";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/scrollbar";
-import { Navigation, Scrollbar } from "swiper/modules";
-import { Box, Typography, Stack, IconButton } from "@mui/material";
+import { Box, Typography, Stack } from "@mui/material";
 import { PrevButton, NextButton } from "./SwiperButtons";
 import Timings from "./Timings";
 import MyContext from "../../Search/MyContext";
 
-export default function Calender() {
+export default function Calender({name}) {
   const dates = getSevenDays();
   const [formattedDates, setFormattedDates] = useState(null);
-  const [selectedDate, setSelectedDate] = useState(null);
   const swiperRef = useRef(null);
-  const { timing } = useContext(MyContext);
+  const { timing, selectedDate, setSelectedDate} =
+    useContext(MyContext);
 
   useEffect(() => {
     if (dates.length) {
@@ -35,13 +32,15 @@ export default function Calender() {
     setSelectedDate(dates[0]);
   }, []);
 
-  useEffect(() => {
-    console.log(selectedDate);
-  }, [selectedDate]);
-
   return (
-    <Box borderTop="2px solid #ededf2">
-      <Box position="relative">
+    <Box
+      borderTop="2px solid #ededf2"
+      sx={{
+        overflowX: "hidden",
+        width: "100%",
+      }}
+    >
+      <Box position="relative" width="100%">
         <MySwiper
           formattedDates={formattedDates}
           selectedDate={selectedDate}
@@ -62,6 +61,7 @@ export default function Calender() {
             timings={time.timings}
             key={time.period}
             period={time.period}
+            name={name}
           />
         ))}
       </Box>
@@ -71,7 +71,6 @@ export default function Calender() {
 
 const MySwiper = ({
   formattedDates,
-  selectedDate,
   setSelectedDate,
   normalDates,
   swiperRef,

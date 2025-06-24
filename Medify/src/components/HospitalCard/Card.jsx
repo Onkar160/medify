@@ -1,21 +1,40 @@
 import { Box, Typography, Button, Stack, Grid } from "@mui/material";
 import HospitalLogo from "../../assets/hospital_logo.png";
 import ThumbUpAltIcon from "@mui/icons-material/ThumbUpAlt";
+import Calender from "../Calender/Calender";
+import { useState } from "react";
 
-export default function Card({ open, setOpen, type }) {
+
+export default function Card({ type, hospital }) {
+  const [open, setOpen] = useState(false);
+
   return (
-    <Grid container spacing={0} width="100%" alignItems="center">
-      <Grid size={{ xs: 12, lg: 3 }}>
-        <Box component="img" src={HospitalLogo} />
+    <Box>
+      <Grid container spacing={0} width="100%" alignItems="center">
+        <Grid size={{ xs: 12, lg: 3 }}>
+          <Box component="img" src={HospitalLogo} />
+        </Grid>
+        <Grid size={{ xs: 12, lg: 9 }}>
+          <CardDetails
+            open={open}
+            setOpen={setOpen}
+            type={type}
+            hospital={hospital}
+          />
+        </Grid>
       </Grid>
-      <Grid size={{ xs: 12, lg: 9 }}>
-        <CardDetails open={open} setOpen={setOpen} type={type} />
-      </Grid>
-    </Grid>
+      <Box pt={3} display={open ? "block" : "none"}>
+        <Calender name={hospital["Provider ID"]} />
+      </Box>
+    </Box>
   );
 }
 
-const CardDetails = ({ open, setOpen, type }) => {
+const CardDetails = ({ open, setOpen, type, hospital }) => {
+  const openCalender = () => {
+    setOpen(!open);
+  };
+
   return (
     <Grid container direction="column">
       <Grid size={12}>
@@ -35,7 +54,7 @@ const CardDetails = ({ open, setOpen, type }) => {
               mr={2}
               mb={1}
             >
-              Fortis Hospital Richmond Road
+              {hospital["Hospital Name"]}
             </Typography>
             <Box display={type === "Booking Card" ? "block" : "none"}>
               <Button variant="outlined" sx={{ marginRight: "15px" }}>
@@ -69,10 +88,10 @@ const CardDetails = ({ open, setOpen, type }) => {
 
           <Stack>
             <Typography variant="p" fontWeight={600}>
-              Banglore, Karnataka
+              {hospital["City"]}, {hospital["State"]}
             </Typography>
             <Typography variant="p" color="#414146" mb={1}>
-              Onkar's Hospital Nanded
+              {hospital["Address"]}
             </Typography>
           </Stack>
           <Typography
@@ -149,7 +168,7 @@ const CardDetails = ({ open, setOpen, type }) => {
                 // width: "229.555px"
                 display: type === "Hospital Card" ? "block" : "none",
               }}
-              onClick={() => setOpen(!open)}
+              onClick={openCalender}
             >
               Book FREE Center Visit
             </Button>
