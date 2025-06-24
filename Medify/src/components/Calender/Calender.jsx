@@ -130,14 +130,9 @@ const MySwiper = ({
                 onClick={(e) => selectDate(ind, e)}
               >
                 {ind === 0 && (
-                  <Typography
-                    variant="p"
-                    fontSize={18}
-                    fontWeight={selected && 650}
-                  >
+                  <p style={{ fontSize: 18, fontWeight: selected && 650 }}>
                     Today
-                    
-                  </Typography>
+                  </p>
                 )}
                 {ind !== 0 && (
                   <Typography

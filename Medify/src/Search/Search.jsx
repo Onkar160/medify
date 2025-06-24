@@ -148,7 +148,7 @@ export default function Search() {
         >
           <Stack spacing={1} pb={5}>
             <Typography variant="h1" fontSize={28} fontWeight={500}>
-              {hospitalList.length} medical centers available in the {selectedCity}
+              {hospitalList.length} medical centers available in the {selectedCity.toLowerCase()}
             </Typography>
             <Typography
               color="#787887"
