@@ -18,6 +18,7 @@ import { GoVerified } from "react-icons/go";
 import MyContext from "./MyContext";
 import BookingModal from "../components/BookingModal/BookingModal";
 import axios from "axios";
+import AutohideSnackbar from "../components/AutohideSnackbar/AutohideSnackbar";
 
 export default function Search() {
   const [params, setParams] = useSearchParams();
@@ -27,8 +28,8 @@ export default function Search() {
   const [selectedTime, setSelectedTime] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [hospitalList, setHospitalList] = useState([]);
-  // const [bookingEmail, setBookingEmail] = useState("");
   const [bookingID, setBookingID] = useState(null);
+  const [openSnackbar, setSnackbar] = useState(false);
 
   const timing = useMemo(
     () => [
@@ -226,7 +227,9 @@ export default function Search() {
           hospitalList={hospitalList}
           bookingID={bookingID}
           persistBookings={persistBookings}
+          setSnackbar={setSnackbar}
         />
+        <AutohideSnackbar open={openSnackbar} setOpen={setSnackbar} />
       </div>
     </MyContext.Provider>
   );
