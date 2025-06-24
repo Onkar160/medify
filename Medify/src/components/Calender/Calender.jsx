@@ -129,15 +129,27 @@ const MySwiper = ({
                 }}
                 onClick={(e) => selectDate(ind, e)}
               >
-                <Typography
-                  variant="p"
-                  fontSize={18}
-                  fontWeight={selected && 650}
-                >
-                  {ind === 0 && "Today"}
-                  {ind === 1 && "Tomorrow"} {ind >= 2 && date}
-                </Typography>
-                <Typography variant="p" color="#01A400">
+                {ind === 0 && (
+                  <Typography
+                    variant="p"
+                    fontSize={18}
+                    fontWeight={selected && 650}
+                  >
+                    Today
+                    
+                  </Typography>
+                )}
+                {ind !== 0 && (
+                  <Typography
+                    variant="h6"
+                    fontSize={18}
+                    fontWeight={selected && 650}
+                  >
+                    {ind === 1 && "Tomorrow"} {ind >= 2 && date}
+                  </Typography>
+                )}
+
+                <Typography variant="h6" color="#01A400" fontSize={16}>
                   11 Slots Available
                 </Typography>
               </Stack>
