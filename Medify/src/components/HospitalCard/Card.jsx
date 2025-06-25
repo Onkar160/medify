@@ -3,7 +3,7 @@ import HospitalLogo from "../../assets/hospital_logo.png";
 import ThumbUpAltIcon from "@mui/icons-material/ThumbUpAlt";
 import Calender from "../Calender/Calender";
 import { useState } from "react";
-
+import moment from "moment";
 
 export default function Card({ type, hospital }) {
   const [open, setOpen] = useState(false);
@@ -23,9 +23,11 @@ export default function Card({ type, hospital }) {
           />
         </Grid>
       </Grid>
-      <Box pt={3} display={open ? "block" : "none"}>
-        <Calender name={hospital["Provider ID"]} />
-      </Box>
+      {type === "Hospital Card" && (
+        <Box pt={3} display={open ? "block" : "none"}>
+          <Calender name={hospital["Provider ID"]} />
+        </Box>
+      )}
     </Box>
   );
 }
@@ -63,9 +65,9 @@ const CardDetails = ({ open, setOpen, type, hospital }) => {
                   fontSize="16px"
                   color="#2AA7FF"
                   fontWeight={400}
-                  width="62px"
+                  width="72px"
                 >
-                  11:30 PM
+                  {hospital["bookingTime"]}
                 </Typography>
               </Button>
               <Button
@@ -80,7 +82,7 @@ const CardDetails = ({ open, setOpen, type, hospital }) => {
                   width="100px"
                   fontWeight={500}
                 >
-                  10 April 2025
+                  {moment(new Date(hospital["bookingDate"])).format("ddd, DD MMM")}
                 </Typography>
               </Button>
             </Box>
